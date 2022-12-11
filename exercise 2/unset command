@@ -1,0 +1,1 @@
+The unset command removes any settings to the value of an option, which reverts the option to the factory default value. Some options are predefined and read-only, and cannot be unset. The unset command supports the "Unsetting an option" subcommand.
