@@ -1,0 +1,18 @@
+APT (Advanced Package Tool) is the command-line tool to interact with this packaging system. There are already dpkg commands to manage it, but apt is a more user-friendly way to handle packages. You can use it to find and install new packages, upgrade packages, clean your packages, etc.
+
+There are two main tools around APT: apt-get and apt-cache. apt-get is for installing, upgrading, and cleaning packages, while apt-cache command is used for finding new packages. We’ll see all of these commands with examples later in this guide.
+Using apt-get commands
+Let’s start with apt-get commands. You just cannot escape this command. It’s better to have an understanding of it so that you can handle your Linux system in a slightly better way.
+
+Update the package database with apt-get
+apt-get basically works on a database of available packages. If you don’t update this database, the system won’t know if there are newer packages available or not. In fact, this is the first command you need to run on any Debian-based Linux system after a fresh install.
+
+Updating the package database requires superuser privileges, so you’ll need to use sudo.
+
+sudo apt-get update
+when you run this command, you will see the information being retreived from different servers
+You’ll see three types of lines here: hit, get, and ign. Let me explain them to you:
+
+hit: there is no change in the package version
+ign: the package is being ignored. There could be various reasons for that. Either the package is so recent that it doesn’t even bother to check for a new version, or there was an error in retrieving the file but error was trivial and thus it is being ignored. This is not an error. There is no need to be worried.
+get: There is a new version of the package available. apt-get will download this information (not the package itself). You can see that there is downloaded information on the ‘get’ lines in the screenshot above.
