@@ -1,1 +1,29 @@
 sudo: Allows regular users to run programs with the security privileges of the superuser or root
+Sudo stands for SuperUser DO and is used to access restricted files and operations. By default, Linux restricts access to certain parts of the system preventing sensitive files from being compromised.
+
+The sudo command temporarily elevates privileges allowing users to complete sensitive tasks without logging in as the root user. 
+
+
+Prerequisites
+
+A system running Linux
+Access to a command line/terminal window (Activities > Search > Terminal)
+A user account with sudo or root privileges
+How to use the sudo Command
+sudo was developed as a way to temporarily grant a user administrative rights. To make it work, use sudo before a restricted command. The system will prompt for your password. Once provided, the system runs the command.
+
+Syntax
+To start using sudo, use the following syntax:
+
+sudo [command]
+
+When the sudo command is used, a timestamp is entered in the system logs. The user can run commands with elevated privileges for a short time (default 15 minutes). If a non-sudo user tries to use the sudo command, it is logged as a security event.
+
+Options
+sudo can be used with additional options:
+
+-h – help; displays syntax and command options
+-V – version; displays the current version of the sudo application
+-v – validate; refresh the time limit on sudo without running a command
+-l – list; lists the user’s privileges, or checks a specific command
+-k – kill; end the current sudo privileges
