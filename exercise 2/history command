@@ -1,0 +1,2 @@
+history	Gives a list of all past commands typed in the current terminal session
+The history command in Linux is a built-in shell tool that displays a list of commands used in the terminal session. history allows users to reuse any listed command without retyping it.
