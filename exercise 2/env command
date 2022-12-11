@@ -1,0 +1,12 @@
+env is used to either print environment variables. It is also used to run a utility or command in a custom environment. In practice, env has another common use. It is often used by shell scripts to launch the correct interpreter. In this usage, the environment is typically not changed.
+Options of env command
+
+1. Without any argument : print out a list of all environment variables.
+-i or –ignore-environment or only – : runs a command with an empty environment
+
+SYNTAX :
+
+$ env -i your_command
+In this, it clears all the environment variable and then new shell sets the environment variable PWD. Thus in this new shell when we execute env, we only see one environment variable PWD.
+
+2. -u or –unset: remove variable from the environment
